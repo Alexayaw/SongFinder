@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<style>
+	
+	.item{
+		
+		background: pink;
+		align-self: baseline;
+		
+	}
+	#container{
+		display:grid;
+		background: aliceblue;
+		grid-template-areas: "header header"
+							"content sidebar"
+							"footer footer";
+		grid-template-columns: 3fr 1fr;
+		grid-template-rows: 1fr 3fr 1fr;
+		grid-gap:10px;
+	}
+	header,main,aside,footer{
+		
+		border:1px dashed;
+	}
+	header{
+		grid-row:header;
+		grid-column:header;
+	}
+	main{
+		display:grid;
+		grid-gap:10px;
+		grid-row:content;
+		grid-column:content;
+		grid-template-columns: repeat(4,1fr);
+		grid-template-rows: repeat(1fr);
+/*		justify-items:center;*/
+		
+		
+	}
+	aside{
+		grid-row:sidebar;
+		grid-column:sidebar;
+	}
+	footer{
+		grid-row:footer;
+		grid-column:footer;
+	}
+	</style>
+<body>
+	<div id="container">
+	<header>Header</header>
+		<main>
+		
+			<div class="item"> 
+			<p>Item 1</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="item">
+			<p>Item 2 </p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			<div class="item"> 
+			<p>Item 3</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="item">
+			<p>Item 4 </p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			
+		
+			</main>
+		<aside>Sidebar</aside>
+		<footer>Footer</footer>
+	</div>
+</body>
+</html>
